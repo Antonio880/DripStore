@@ -10,9 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <body className='flex flex-col min-h-screen'>
         <Header />
-        <main className='flex flex-grow'>
           <App />
-        </main>
         <Footer />
       </body>
     </BrowserRouter>
