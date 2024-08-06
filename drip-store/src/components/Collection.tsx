@@ -21,7 +21,7 @@ const Collection: React.FC = () => {
   ];
 
   return (
-    <div className="py-10">
+    <div className="py-10 ">
       <h1 className="text-dark-gray-2 text-2xl font-bold pl-4">Coleções em destaque</h1>
       <div className="flex space-x-4 overflow-x-auto p-4">
         {cards.map((card, index) => (
