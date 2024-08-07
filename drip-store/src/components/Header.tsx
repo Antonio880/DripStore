@@ -56,7 +56,7 @@ export default function Header() {
               <SearchInput />
             </div>
             <div className="hidden md:flex items-center">
-              <button className="p-4">
+              <button className="p-4 tracking-widest">
                 <u>Cadastre-se</u>
               </button>
               <CustomButton>Entrar</CustomButton>
