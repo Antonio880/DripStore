@@ -35,14 +35,14 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start md:mr-20 mb-8 md:mb-0">
             <div className="flex items-center">
               <img src="icon_drip_store_white.svg" alt="Digital Store Logo" className="w-7 h-7 md:w-10 md:h-10" />
-              <h1 className="text-lg md:text-4xl font-bold pl-2">Digital Store</h1>
+              <h1 className="text-lg md:text-4xl font-bold pl-2 md:w-[270px]">Digital Store</h1>
             </div>
-            <p className="py-4 md:py-8 text-center text-sm md:text-lg md:text-left max-w-xs">
+            <p className="py-4 md:py-8 text-center text-sm md:text-base md:text-left max-w-xs">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
             </p>
             <SocialIcons />
           </div>
-          <div className="flex flex-col md:flex-row justify-between w-full">
+          <div className="flex flex-col md:flex-row justify-around w-full">
             <InfoLinks title="Informação" links={infoLinks} />
             <InfoLinks title="Categorias" links={categoryLinks} />
             <ContactInfo title="Contato" info={contactInfo} />

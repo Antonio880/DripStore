@@ -2,9 +2,13 @@ import React from 'react';
 import ProductCard from '../ProductCard';
 import { products } from './data';
 
-const ProductList: React.FC = () => {
+interface ProductListProps {
+  classname?: string;
+}
+
+const ProductList: React.FC<ProductListProps> = ({ classname }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pb-10 p-4">
+    <div className={`grid ${classname} gap-4 pb-10 `}>
       {products.map((product, index) => (
         <ProductCard
           key={index}

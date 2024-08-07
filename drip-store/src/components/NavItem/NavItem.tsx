@@ -1,4 +1,5 @@
 import './styles.css'
+
 interface NavItemProps {
     label: string;
     isActive: boolean;
@@ -6,6 +7,7 @@ interface NavItemProps {
 }
 
 const NavItem = ({ label, isActive, onClick }: NavItemProps) => {
+  
   return (
     <div className="flex items-center">
       <h2

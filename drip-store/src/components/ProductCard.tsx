@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div className="cursor-pointer">
-      <div className="relative bg-white shadow-xl py-6 m-4 rounded-md p-4 flex flex-col ">
+      <div className="relative bg-white shadow-xl py-6 mx-4 mb-4 rounded-md p-4 flex flex-col ">
         {discount && (
           <div className="bg-[#E7FF86] flex font-bold top-8 text-dark-gray-2 justify-center p-3 absolute left-8 rounded-3xl items-center z-10">
             {discount}

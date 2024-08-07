@@ -3,7 +3,7 @@ import CustomButton from "./CustomButton";
 
 const SpecialOfferCard: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row py-10 justify-center items-center rounded-lg ">
+    <div className="flex flex-col md:flex-row py-16 justify-center items-center rounded-lg ">
       <div className="flex justify-center mb-4 md:mb-0">
         <img
           src="offer_special.svg"
