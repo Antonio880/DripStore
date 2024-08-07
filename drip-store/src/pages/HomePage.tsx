@@ -4,12 +4,15 @@ import Carousel from "../components/Carousel";
 import ProductList from "../components/ProductList/ProductList";
 import SpecialOfferCard from "../components/SpecialOfferCard";
 import EmphasisCollection from "../components/EmphasisCollection";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   return (
     <main className="flex bg-[#F5F5F5] flex-col items-center w-full">
       <div className="flex-grow w-full">
-        <div className="flex justify-around bg-[#F5F5F5] w-full px-28">
+        <div className="flex justify-around bg-[#F5F5F5] w-full md:px-28">
           <Carousel />
         </div>
         <div className="flex justify-center">
@@ -24,7 +27,7 @@ export default function HomePage() {
               <h1 className="text-dark-gray-2 text-2xl font-bold py-18">
                 Produtos em alta
               </h1>
-              <button className="text-xl text-primary">Ver todos ➔</button>
+              <button className="text-xl text-primary" onClick={() => navigate("/produtos")}>Ver todos ➔</button>
             </div>
             <ProductList classname={"grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-4"} />
           </div>

@@ -5,6 +5,9 @@ import ProductFilter from '../components/ProductFilter/ProductFilter';
 const ProductPage: React.FC = () => {
   return (
     <main className="flex flex-grow w-full bg-[#F5F5F5] p-6">
+      <div>
+        
+      </div>
       <div className="flex">
         <ProductFilter />
       </div>
