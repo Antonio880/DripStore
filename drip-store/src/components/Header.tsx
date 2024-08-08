@@ -1,23 +1,28 @@
+import React, { useState } from "react";
 import SearchInput from "./SearchInput";
 import CustomButton from "./CustomButton";
 import NavigationMenu from "./NavigationMenu";
-import { useState } from "react";
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 
 export default function Header() {
   const [cartItemCount, setCartItemCount] = useState(3);
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleSearchClick = () => {
     setIsSearchActive(!isSearchActive);
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <header className="font-inter px-6 pt-4 md:px-28 md:pt-8">
+    <header className="font-inter pb-4 md:pb-0 px-6 pt-4 md:px-28 md:pt-8">
       {isSearchActive ? (
         <div className="flex justify-center">
-          <div className=" relative w-[280px] max-w-sm">
+          <div className="relative w-[280px] max-w-sm">
             <input
               type="text"
               placeholder="Pesquisar Produto..."
@@ -40,7 +45,10 @@ export default function Header() {
         <div>
           <div className="flex justify-between items-center md:justify-around">
             <div className="flex items-center md:hidden">
-              <AiOutlineMenu className="text-2xl cursor-pointer" />
+              <AiOutlineMenu
+                className="text-2xl cursor-pointer"
+                onClick={toggleSidebar}
+              />
             </div>
             <div className="flex items-center justify-center md:justify-start md:flex-none">
               <img
@@ -91,6 +99,28 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      {/* Barra lateral */}
+      <div
+        className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transition-transform transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } md:hidden w-3/4`}
+      >
+        <div className="flex justify-between items-center p-4">
+          <h2 className="text-xl text-dark-gray-2 font-bold">Páginas</h2>
+          <AiOutlineClose
+            className="text-2xl cursor-pointer"
+            onClick={toggleSidebar}
+          />
+        </div>
+        <NavigationMenu />
+        <div className="pt-[400px] flex flex-col items-center">
+          <CustomButton>Entrar</CustomButton>
+          <button className="p-4 tracking-widest">
+            <u>Cadastre-se</u>
+          </button>  
+        </div>
+      </div>
     </header>
   );
 }
