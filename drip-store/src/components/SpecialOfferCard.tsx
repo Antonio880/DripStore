@@ -8,15 +8,15 @@ const SpecialOfferCard: React.FC = () => {
         <img
           src="offer_special.svg"
           alt="Oferta Especial"
-          className=" w-[700px]"
+          className="md:w-[700px]"
         />
       </div>
       <div className="flex flex-col  md:ml-12 md:pr-[200px]">
-        <p className="text-primary font-bold">Oferta especial</p>
+        <p className="text-warning md:text-primary font-bold">Oferta especial</p>
         <h1 className="text-dark-gray-2 text-2xl md:text-5xl md:w-[500px] font-bold my-2">
           Air Jordan edição de colecionador
         </h1>
-        <p className="text-dark-gray-2 mb-4 mb: w-[500px]">
+        <p className="text-dark-gray-2 mb-4 mb:w-[500px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

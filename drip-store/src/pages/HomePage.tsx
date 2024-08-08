@@ -32,7 +32,7 @@ export default function HomePage() {
             <ProductList classname={"grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-4"} />
           </div>
         </div>
-        <div className=" px-28">
+        <div className=" px-7 md:px-28">
           <SpecialOfferCard />
         </div>
       </div>
