@@ -23,16 +23,16 @@ export default function HomePage() {
         </div>
         <div className="flex justify-center">
           <div>
-            <div className="flex justify-between px-9">
-              <h1 className="text-dark-gray-2 text-2xl font-bold py-18">
+            <div className="flex justify-between px-8 md:px-9">
+              <h1 className="text-dark-gray-2 text-lg md:text-2xl font-bold py-18">
                 Produtos em alta
               </h1>
-              <button className="text-xl text-primary" onClick={() => navigate("/produtos")}>Ver todos ➔</button>
+              <button className="md:text-xl text-primary" onClick={() => navigate("/produtos")}>Ver todos ➔</button>
             </div>
             <ProductList classname={"grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-4"} />
           </div>
         </div>
-        <div className=" px-7 md:px-28">
+        <div className="bg-white px-7 md:px-28">
           <SpecialOfferCard />
         </div>
       </div>
