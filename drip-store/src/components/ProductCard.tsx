@@ -18,10 +18,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price_old
 }) => {
   return (
-    <div className="cursor-pointer">
-      <div className="relative bg-white shadow-xl py-6 mx-4 mb-4 rounded-md p-4 flex flex-col ">
+    <div className="cursor-pointer w-full sm:w-72 max-w-xs mx-auto">
+      <div className="relative bg-white shadow-xl py-4 px-4 sm:px-6 mb-4 rounded-md flex flex-col">
         {discount && (
-          <div className="bg-[#E7FF86] flex font-bold top-8 text-dark-gray-2 justify-center p-3 absolute left-8 rounded-3xl items-center z-10">
+          <div className="bg-[#E7FF86] flex font-bold text-xs top-3 sm:top-8 text-dark-gray-2 justify-center p-2 sm:p-3 absolute left-3 sm:left-8 rounded-3xl items-center z-10">
             {discount}
           </div>
         )}
@@ -31,14 +31,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
           className="w-full h-auto mb-4 rounded-md"
         />
       </div>
-      <div className="pl-6">
-        <p className="text-gray-500 text-sm">{category}</p>
-        <h2 className="text-2xl text-dark-gray-2">{name}</h2>
+      <div className="pl-4 sm:pl-6">
+        <p className="text-gray-500 text-xs sm:text-sm">{category}</p>
+        <h2 className="text-xl sm:text-2xl text-dark-gray-2">{name}</h2>
         <div className="flex gap-2">
           <p className="">
-            <s className="text-lg text-light-gray">${price_old}</s>
+            <s className="text-base sm:text-lg text-light-gray">${price_old}</s>
           </p>
-          <p className="text-lg font-bold text-dark-gray">${price}</p>
+          <p className="text-base sm:text-lg font-bold text-dark-gray">${price}</p>
         </div>
       </div>
     </div>

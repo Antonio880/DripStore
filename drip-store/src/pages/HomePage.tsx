@@ -29,7 +29,7 @@ export default function HomePage() {
               </h1>
               <button className="md:text-xl text-primary" onClick={() => navigate("/produtos")}>Ver todos ➔</button>
             </div>
-            <ProductList classname={"grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-4"} />
+            <ProductList classname={"grid-cols-2 md:grid-cols-4 p-4"} />
           </div>
         </div>
         <div className="bg-white px-7 md:px-28">

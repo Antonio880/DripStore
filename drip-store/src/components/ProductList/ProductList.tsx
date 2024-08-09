@@ -18,7 +18,6 @@ const ProductList: React.FC<ProductListProps> = ({ classname }) => {
 
     window.addEventListener('resize', handleResize);
 
-    console.log(isSmallScreen);
     return () => {
       window.removeEventListener('resize', handleResize);
     };

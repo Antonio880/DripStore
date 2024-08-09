@@ -8,11 +8,11 @@ const ProductPage: React.FC = () => {
       <div>
         
       </div>
-      <div className="flex">
+      <div className="hidden md:flex">
         <ProductFilter />
       </div>
       <div className="flex-grow">
-        <ProductList classname="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4" />
+        <ProductList classname="grid-cols-2 md:grid-cols-3 px-4" />
       </div>
     </main>
   );
