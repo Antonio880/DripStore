@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import SearchInput from "./SearchInput";
 import CustomButton from "./CustomButton";
 import NavigationMenu from "./NavigationMenu";
@@ -10,9 +10,11 @@ import { CiSearch } from "react-icons/ci";
 export default function Header() {
   const [cartItemCount, setCartItemCount] = useState(3);
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  
+
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSearchClick = () => {
     setIsSearchActive(!isSearchActive);
@@ -20,6 +22,17 @@ export default function Header() {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    if (searchQuery.trim()) {
+      navigate(`/produtos?search=${encodeURIComponent(searchQuery.trim())}`);
+      setIsSearchActive(false);
+    }
   };
 
   const isProductsPage = location.pathname === "/produtos";
@@ -35,7 +48,7 @@ export default function Header() {
           <h1 className="text-2xl md:text-4xl font-bold text-primary pl-2">Digital Store</h1>
         </div>
         <div className="hidden md:block">
-          <SearchInput />
+          <SearchInput onChange={handleSearchChange} onSearch={handleSearchSubmit} />
         </div>
         <div className="hidden md:flex items-center">
           <button className="p-4">
@@ -59,9 +72,12 @@ export default function Header() {
             <input
               type="text"
               placeholder="Pesquisar Produto..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+              onKeyDown={(e) => e.key === "Enter" && handleSearchSubmit()}
               className="bg-gray-100 rounded-md p-3 pl-3 pr-10 w-full"
             />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <div className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" onClick={handleSearchSubmit}>
               <CiSearch className="text-gray-400" size={22} />
             </div>
           </div>
