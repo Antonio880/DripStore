@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price_old
 }) => {
   return (
-    <div className="cursor-pointer w-full sm:w-72 max-w-xs mx-auto">
+    <div className="cursor-pointer w-full   mx-auto">
       <div className="relative bg-white shadow-xl py-4 px-4 sm:px-6 mb-4 rounded-md flex flex-col">
         {discount && (
           <div className="bg-[#E7FF86] flex font-bold text-xs top-3 sm:top-8 text-dark-gray-2 justify-center p-2 sm:p-3 absolute left-3 sm:left-8 rounded-3xl items-center z-10">
