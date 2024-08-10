@@ -1,5 +1,6 @@
 export const products = [
   {
+    id: 1,
     name: "K-Swiss V8 - Masculino",
     category: "Roupas",
     price: 100,
@@ -8,6 +9,7 @@ export const products = [
     imageSrc: "tenis_product.svg",
   },
   {
+    id: 2,
     name: "K-Swiss V8 - Masculino",
     category: "Tênis",
     price: 100,
@@ -15,14 +17,7 @@ export const products = [
     imageSrc: "tenis_product.svg",
   },
   {
-    name: "K-Swiss V8 - Masculino",
-    category: "Tênis",
-    price: 100,
-    price_old: 200,
-    discount: "15% OFF",
-    imageSrc: "tenis_product.svg",
-  },
-  {
+    id: 3,
     name: "K-Swiss V8 - Masculino",
     category: "Tênis",
     price: 100,
@@ -31,6 +26,16 @@ export const products = [
     imageSrc: "tenis_product.svg",
   },
   {
+    id: 4,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    price: 100,
+    price_old: 200,
+    discount: "15% OFF",
+    imageSrc: "tenis_product.svg",
+  },
+  {
+    id: 5,
     name: "K-Swiss V8 - Masculino",
     category: "Roupas",
     price: 100,
@@ -39,6 +44,7 @@ export const products = [
     imageSrc: "tenis_product.svg",
   },
   {
+    id: 6,
     name: "K-Swiss V8 - Masculino",
     category: "Tênis",
     price: 100,
@@ -46,6 +52,7 @@ export const products = [
     imageSrc: "tenis_product.svg",
   },
   {
+    id: 7,
     name: "K-Swiss V8 - Masculino",
     category: "Tênis",
     price: 100,
@@ -54,6 +61,7 @@ export const products = [
     imageSrc: "tenis_product.svg",
   },
   {
+    id: 8,
     name: "K-Swiss V8 - Masculino",
     category: "Tênis",
     price: 100,

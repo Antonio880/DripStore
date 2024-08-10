@@ -29,7 +29,7 @@ const conditionItems = [
 
 const ProductFilter: React.FC = () => {
   return (
-    <div className="bg-white shadow-lg p-4 rounded-lg w-64">
+    <div className="bg-white md:shadow-lg p-4 rounded-lg w-64">
       <h2 className="font-bold text-xl">Filtrar por</h2>
       <span className="flex h-0.5 my-6 bg-light-gray-2 transition-all duration-500 ease-in-out w-full"></span>
       <FilterSection title="Marca" items={brandItems} itemType="checkbox" />
