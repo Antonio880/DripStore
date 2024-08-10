@@ -6,6 +6,7 @@ export const products = [
     price: 100,
     price_old: 200,
     discount: "30% OFF",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imageSrc: "tenis_product.svg",
   },
   {
@@ -14,6 +15,7 @@ export const products = [
     category: "Tênis",
     price: 100,
     price_old: 200,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imageSrc: "tenis_product.svg",
   },
   {
@@ -23,6 +25,7 @@ export const products = [
     price: 100,
     price_old: 200,
     discount: "15% OFF",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imageSrc: "tenis_product.svg",
   },
   {
@@ -32,6 +35,8 @@ export const products = [
     price: 100,
     price_old: 200,
     discount: "15% OFF",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imageSrc: "tenis_product.svg",
   },
   {
@@ -41,6 +46,8 @@ export const products = [
     price: 100,
     price_old: 200,
     discount: "30% OFF",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imageSrc: "tenis_product.svg",
   },
   {
@@ -49,6 +56,7 @@ export const products = [
     category: "Tênis",
     price: 100,
     price_old: 200,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imageSrc: "tenis_product.svg",
   },
   {
@@ -57,6 +65,7 @@ export const products = [
     category: "Tênis",
     price: 100,
     price_old: 200,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     discount: "15% OFF",
     imageSrc: "tenis_product.svg",
   },
@@ -67,6 +76,7 @@ export const products = [
     price: 100,
     price_old: 200,
     discount: "15% OFF",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imageSrc: "tenis_product.svg",
   },
 ];

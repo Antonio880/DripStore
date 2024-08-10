@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../components/ProductList/data";
+import ProductList from "../components/ProductList/ProductList";
+import { useCart } from "../context/CartContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CustomButton from "../components/CustomButton";
 import "swiper/css";
@@ -8,14 +10,21 @@ import "swiper/css";
 const DetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const product = products.find(p => p.id === parseInt(id || ""));
-
-  useEffect(() => {
-    console.log(product);
-  }, [product]);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   if (!product) {
     return <p>Produto não encontrado</p>;
   }
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: 1
+    });
+  };
 
   return (
     <main className="p-6">
@@ -29,7 +38,7 @@ const DetailsPage: React.FC = () => {
           >
             <SwiperSlide>
               <img
-                src={"tenis_product.svg"}
+                src={"../assets/tenis_product.svg"}
                 alt={product.name}
                 className="w-full h-auto rounded-md"
               />
@@ -49,10 +58,34 @@ const DetailsPage: React.FC = () => {
               ${product.price}
             </p>
           </div>
-          <p className="mt-6 text-md md:text-lg">
-            {/* Descrição do produto */}
+          <p className="text-light-gray font-bold text-xl py-4">
+            Descrição do Produto
           </p>
-          <CustomButton children="Comprar"  />
+          <p className=" text-sm md:text-lg">{product.description}</p>
+          <CustomButton
+            onClick={handleAddToCart} 
+            children="Comprar"
+            classname="bg-[#FFB31F] hover:bg-[#e2a834]"
+          />
+        </div>
+      </div>
+      <div className="">
+        <div>
+          <div className="flex justify-between px-8 md:px-9">
+            <h1 className="text-dark-gray-2 text-lg md:text-2xl font-bold py-18">
+              Produtos em alta
+            </h1>
+            <button
+              className="md:text-xl text-primary"
+              onClick={() => navigate("/produtos")}
+            >
+              Ver todos ➔
+            </button>
+          </div>
+          <ProductList
+            products={products}
+            classname={"grid-cols-2 md:grid-cols-4 p-4"}
+          />
         </div>
       </div>
     </main>

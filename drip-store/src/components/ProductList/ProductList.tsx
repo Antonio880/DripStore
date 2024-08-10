@@ -7,6 +7,7 @@ interface ProductListProps {
     id: number,
     name: string;
     category: string;
+    description: string;
     price: number;
     price_old?: number;
     discount?: string;
@@ -47,6 +48,7 @@ const ProductList: React.FC<ProductListProps> = ({ classname, products, isProduc
           name={product.name}
           category={product.category}
           price={product.price}
+          description={product.description}
           discount={product.discount}
           imageSrc={product.imageSrc}
           price_old={product.price_old}

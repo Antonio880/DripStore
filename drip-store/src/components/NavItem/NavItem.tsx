@@ -12,7 +12,7 @@ const NavItem = ({ label, isActive, onClick }: NavItemProps) => {
     <div className="flex items-center">
       <h2
         onClick={onClick}
-        className={`relative text-xl font-bold px-6 cursor-pointer ${
+        className={`relative text-xl font-bold mx-6 cursor-pointer ${
           isActive ? 'text-primary active' : 'text-[#474747]'
         } transition-colors duration-300 ease-in-out`}
       >
