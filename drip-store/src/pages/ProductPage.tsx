@@ -28,7 +28,6 @@ const ProductPage: React.FC = () => {
       product.category.toLowerCase().includes(searchQuery)
     );
 
-    // Ordenar produtos conforme a opção selecionada
     const sortedResults = results.sort((a, b) => {
       switch (sortOption) {
         case "priceAsc":
@@ -57,7 +56,7 @@ const ProductPage: React.FC = () => {
           <select
             name="sortOptions"
             id="sortOptions"
-            className="md:mt-2 order-1 md:order-2 p-3 md:mr-5 border border-black rounded-sm"
+            className="md:mt-2 order-1 mb-4 md:order-2 p-3 md:mr-5 border border-black rounded-md"
             value={sortOption}
             onChange={handleSortChange}
           >

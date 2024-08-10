@@ -59,7 +59,7 @@ export default function Header() {
         <div className="relative flex items-center cursor-pointer">
           <AiOutlineSearch className="text-2xl md:hidden" onClick={handleSearchClick} />
           <img src="carrinho.svg" className="w-8 h-8 md:w-10 md:h-10 ml-4" alt="Carrinho" />
-          <div className="absolute top-0 right-0 bg-[#EE4266] text-white rounded-full h-6 w-6 flex items-center justify-center text-sm">
+          <div className="absolute top-0 right-0 bg-[#EE4266] text-white rounded-full h-4 w-4 md:h-6 md:w-6 flex items-center justify-center text-xs md:text-sm">
             {cartItemCount}
           </div>
         </div>

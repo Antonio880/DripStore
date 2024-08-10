@@ -4,6 +4,7 @@ import ProductCard from '../ProductCard';
 interface ProductListProps {
   classname?: string;
   products: Array<{
+    id: number,
     name: string;
     category: string;
     price: number;
@@ -42,6 +43,7 @@ const ProductList: React.FC<ProductListProps> = ({ classname, products, isProduc
       {displayedProducts.map((product, index) => (
         <ProductCard
           key={index}
+          id={product.id}
           name={product.name}
           category={product.category}
           price={product.price}

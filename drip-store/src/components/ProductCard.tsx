@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
+  id: number;
   name: string;
   category: string;
   price: number;
@@ -10,6 +12,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   name,
   category,
   price,
@@ -18,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price_old
 }) => {
   return (
-    <div className="cursor-pointer w-full   mx-auto">
+    <Link to={`/produtos/${id}`} className="cursor-pointer w-full mx-auto">
       <div className="relative bg-white shadow-xl py-4 px-4 sm:px-6 mb-4 rounded-md flex flex-col">
         {discount && (
           <div className="bg-[#E7FF86] flex font-bold text-xs top-3 sm:top-8 text-dark-gray-2 justify-center p-2 sm:p-3 absolute left-3 sm:left-8 rounded-3xl items-center z-10">
@@ -35,13 +38,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="text-gray-500 text-xs sm:text-sm">{category}</p>
         <h2 className="text-xl sm:text-2xl text-dark-gray-2">{name}</h2>
         <div className="flex gap-2">
-          <p className="">
-            <s className="text-base sm:text-lg text-light-gray">${price_old}</s>
-          </p>
+          {price_old && <p className="text-base sm:text-lg text-light-gray line-through">${price_old}</p>}
           <p className="text-base sm:text-lg font-bold text-dark-gray">${price}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

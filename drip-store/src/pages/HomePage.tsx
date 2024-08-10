@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 import ProductList from "../components/ProductList/ProductList";
 import SpecialOfferCard from "../components/SpecialOfferCard";
 import EmphasisCollection from "../components/EmphasisCollection";
+import { products } from "../components/ProductList/data";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
@@ -29,7 +30,7 @@ export default function HomePage() {
               </h1>
               <button className="md:text-xl text-primary" onClick={() => navigate("/produtos")}>Ver todos ➔</button>
             </div>
-            <ProductList classname={"grid-cols-2 md:grid-cols-4 p-4"} />
+            <ProductList products={products} classname={"grid-cols-2 md:grid-cols-4 p-4"} />
           </div>
         </div>
         <div className="bg-white px-7 md:px-28">
