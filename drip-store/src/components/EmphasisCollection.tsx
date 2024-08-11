@@ -28,10 +28,10 @@ export default function EmphasisCollection() {
         {buttons.map((button) => (
           <div
             key={button.id}
-            className="bg-white flex items-center justify-center rounded-full p-8 shadow-lg"
+            className="bg-white flex cursor-pointer items-center justify-center rounded-full p-8 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            onClick={() => handleButtonClick(button.id)}
           >
             <button
-              onClick={() => handleButtonClick(button.id)}
               style={{
                 width: "64px",
                 height: "64px",

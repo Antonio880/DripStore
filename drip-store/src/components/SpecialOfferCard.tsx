@@ -23,7 +23,7 @@ const SpecialOfferCard: React.FC = () => {
           aliquip
         </p>
         <div className="">
-          <CustomButton>Ver Oferta</CustomButton>
+          <CustomButton classname="bg-primary  hover:bg-[#b33672]">Ver Oferta</CustomButton>
         </div>
       </div>
     </div>

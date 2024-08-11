@@ -5,7 +5,10 @@ import ProductList from "../components/ProductList/ProductList";
 import { useCart } from "../context/CartContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CustomButton from "../components/CustomButton";
+import tenis from "../assets/tenis_product.svg";
 import "swiper/css";
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 const DetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -27,18 +30,41 @@ const DetailsPage: React.FC = () => {
   };
 
   return (
-    <main className="p-6">
+    <main className="p-6 bg-[#F5F5F5]">
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 p-4">
           <Swiper
             spaceBetween={50}
-            slidesPerView={3}
+            slidesPerView={1}
+            navigation={true} 
+            modules={[Navigation]}
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}
           >
             <SwiperSlide>
               <img
-                src={"../assets/tenis_product.svg"}
+                src={tenis}
+                alt={product.name}
+                className="w-full h-auto rounded-md"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={tenis}
+                alt={product.name}
+                className="w-full h-auto rounded-md"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={tenis}
+                alt={product.name}
+                className="w-full h-auto rounded-md"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={tenis}
                 alt={product.name}
                 className="w-full h-auto rounded-md"
               />
@@ -63,13 +89,13 @@ const DetailsPage: React.FC = () => {
           </p>
           <p className=" text-sm md:text-lg">{product.description}</p>
           <CustomButton
-            onClick={handleAddToCart} 
+            onClick={handleAddToCart}
             children="Comprar"
             classname="bg-[#FFB31F] hover:bg-[#e2a834]"
           />
         </div>
       </div>
-      <div className="">
+      <div className="pb-6">
         <div>
           <div className="flex justify-between px-8 md:px-9">
             <h1 className="text-dark-gray-2 text-lg md:text-2xl font-bold py-18">

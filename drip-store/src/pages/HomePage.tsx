@@ -1,6 +1,6 @@
 import React from "react";
 import Collection from "../components/Collection";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/Carousel/Carousel";
 import ProductList from "../components/ProductList/ProductList";
 import SpecialOfferCard from "../components/SpecialOfferCard";
 import EmphasisCollection from "../components/EmphasisCollection";

@@ -1,0 +1,9 @@
+/* Swiper Pagination Bullet Style */
+.swiper-pagination-bullet {
+    background: #FFB31F; /* Cor primária */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #e2a834; /* Cor primária quando ativo */
+  }
+  

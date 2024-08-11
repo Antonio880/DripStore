@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import photo from "../assets/tenis_product.svg";
 
 interface ProductCardProps {
   id: number;
@@ -22,6 +23,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
   imageSrc,
   price_old
 }) => {
+  const location = useLocation();
+
+  const isDynamicRoute = true;
+  const displayImageSrc = isDynamicRoute ? photo : imageSrc;
+
   return (
     <Link to={`/produtos/${id}`} className="cursor-pointer w-full mx-auto">
       <div className="relative bg-white shadow-xl py-4 px-4 sm:px-6 mb-4 rounded-md flex flex-col">
@@ -31,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </div>
         )}
         <img
-          src={imageSrc}
+          src={displayImageSrc}
           alt={name}
           className="w-full h-auto mb-4 rounded-md"
         />
@@ -40,8 +46,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="text-gray-500 text-xs sm:text-sm">{category}</p>
         <h2 className="text-xl sm:text-2xl text-dark-gray-2">{name}</h2>
         <div className="flex gap-2">
-          {price_old && <p className="text-base sm:text-lg text-light-gray line-through">${price_old}</p>}
-          <p className="text-base sm:text-lg font-bold text-dark-gray">${price}</p>
+          {price_old && (
+            <p className="text-base sm:text-lg text-light-gray line-through">
+              ${price_old}
+            </p>
+          )}
+          <p className="text-base sm:text-lg font-bold text-dark-gray">
+            ${price}
+          </p>
         </div>
       </div>
     </Link>
