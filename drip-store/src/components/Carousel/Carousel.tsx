@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,7 +25,14 @@ const pages = [
 const Carousel: React.FC = () => {
   return (
     <div className="relative w-full">
-      <Swiper pagination={true} modules={[Pagination]}>
+      <Swiper pagination={true} modules={[Pagination]}
+      style={{
+        "--swiper-pagination-color": "#c92071",
+        "--swiper-pagination-bullet-inactive-color": "#999999",
+        "--swiper-pagination-bullet-inactive-opacity": "1",
+        "--swiper-pagination-bullet-size": "16px",
+        "--swiper-pagination-bullet-horizontal-gap": "6px"
+      }}>
         {pages.map((page, index) => (
           <SwiperSlide key={index}>
             <div className="cursor-pointer flex flex-col md:flex-row justify-evenly bg-[#F5F5F5] w-full md:px-28">

@@ -40,6 +40,12 @@ const DetailsPage: React.FC = () => {
             modules={[Navigation]}
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}
+            style={ {
+              "--swiper-navigation-size": "44px",
+              "--swiper-navigation-top-offset": "50%",
+              "--swiper-navigation-sides-offset": "10px",
+              "--swiper-navigation-color": "#474747"
+            }}
           >
             <SwiperSlide>
               <img

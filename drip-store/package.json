@@ -32,5 +32,8 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vite-plugin-svgr": "^4.2.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
