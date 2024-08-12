@@ -9,9 +9,11 @@ interface ProductListProps {
     category: string;
     description: string;
     price: number;
+    tam?: string[];
+    cores?: string[];
     price_old?: number;
     discount?: string;
-    imageSrc: string;
+    imagesSrc: string[];
   }>;
   isProductPage?: boolean; 
 }
@@ -48,9 +50,8 @@ const ProductList: React.FC<ProductListProps> = ({ classname, products, isProduc
           name={product.name}
           category={product.category}
           price={product.price}
-          description={product.description}
           discount={product.discount}
-          imageSrc={product.imageSrc}
+          imagesSrc={product.imagesSrc}
           price_old={product.price_old}
         />
       ))}

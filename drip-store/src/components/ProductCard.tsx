@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import photo from "../assets/tenis_product.svg";
+import tenis from "../assets/tenis_nike.svg";
 
 interface ProductCardProps {
   id: number;
@@ -8,8 +9,10 @@ interface ProductCardProps {
   category: string;
   price: number;
   description?: string;
+  cores?: string[];
+  tam?: string[];
   discount?: string;
-  imageSrc: string;
+  imagesSrc: string[];
   price_old?: number;
 }
 
@@ -18,15 +21,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
   name,
   category,
   price,
-  description,
   discount,
-  imageSrc,
+  imagesSrc,
   price_old
 }) => {
-  const location = useLocation();
 
   const isDynamicRoute = true;
-  const displayImageSrc = isDynamicRoute ? photo : imageSrc;
+  let displayImageSrc = isDynamicRoute ? photo : imagesSrc[0];
+  displayImageSrc = imagesSrc[0] === "tenis_nike.svg" ? tenis : photo;
 
   return (
     <Link to={`/produtos/${id}`} className="cursor-pointer w-full mx-auto">
@@ -39,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <img
           src={displayImageSrc}
           alt={name}
-          className="w-full h-auto mb-4 rounded-md"
+          className="w-full h-[330px] mb-4 rounded-md"
         />
       </div>
       <div className="pl-4 sm:pl-6">

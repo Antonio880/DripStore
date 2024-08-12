@@ -153,7 +153,7 @@ export default function Header() {
           <div className="mt-auto pt-[400px] flex flex-col items-center pb-8">
             <span className="flex h-0.5 my-6 bg-light-gray-2 transition-all duration-500 ease-in-out w-5/6" />
             <CustomButton
-              classname="bg-primary  hover:bg-[#b33672]"
+              classname="bg-primary hover:bg-[#b33672]"
               children="Entrar"
             />
             <button className="p-4 tracking-widest">

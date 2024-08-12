@@ -5,6 +5,8 @@ interface CartItem {
   name: string;
   price: number;
   quantity: number;
+  tam: string | null;
+  selectedColor: string | null;
 }
 
 interface CartContextProps {
