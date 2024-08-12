@@ -41,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <img
           src={displayImageSrc}
           alt={name}
-          className="w-full h-[330px] mb-4 rounded-md"
+          className="w-full h-[100px] md:h-[330px] mb-4 rounded-md"
         />
       </div>
       <div className="pl-4 sm:pl-6">
