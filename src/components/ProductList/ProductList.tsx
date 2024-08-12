@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import ProductCard from '../ProductCard';
+import React, { useEffect, useState } from "react";
+import ProductCard from "../ProductCard";
 
 interface ProductListProps {
   classname?: string;
   products: Array<{
-    id: number,
+    id: number;
     name: string;
     category: string;
     description: string;
@@ -15,10 +15,14 @@ interface ProductListProps {
     discount?: string;
     imagesSrc: string[];
   }>;
-  isProductPage?: boolean; 
+  isProductPage?: boolean;
 }
 
-const ProductList: React.FC<ProductListProps> = ({ classname, products, isProductPage = false }) => {
+const ProductList: React.FC<ProductListProps> = ({
+  classname,
+  products,
+  isProductPage = false,
+}) => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -28,18 +32,18 @@ const ProductList: React.FC<ProductListProps> = ({ classname, products, isProduc
 
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const displayedProducts = isSmallScreen
     ? products.slice(0, isProductPage ? 8 : 4)
     : isProductPage
-    ? products 
-    : products.slice(0, 12); 
+    ? products
+    : products.slice(0, 12);
 
   return (
     <div className={`grid ${classname} gap-4 pb-10`}>

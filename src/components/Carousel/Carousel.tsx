@@ -28,13 +28,15 @@ const Carousel: React.FC = () => {
       <Swiper
         pagination={true}
         modules={[Pagination]}
-        style={{
-          "--swiper-pagination-color": "#c92071",
-          "--swiper-pagination-bullet-inactive-color": "#999999",
-          "--swiper-pagination-bullet-inactive-opacity": "1",
-          "--swiper-pagination-bullet-size": "16px",
-          "--swiper-pagination-bullet-horizontal-gap": "6px",
-        }}
+        style={
+          {
+            "--swiper-pagination-color": "#c92071",
+            "--swiper-pagination-bullet-inactive-color": "#999999",
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "16px",
+            "--swiper-pagination-bullet-horizontal-gap": "6px",
+          } as never
+        }
       >
         {pages.map((page, index) => (
           <SwiperSlide key={index}>

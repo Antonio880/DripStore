@@ -44,12 +44,14 @@ const DetailsPage: React.FC = () => {
             slidesPerView={1}
             navigation={true}
             modules={[Navigation]}
-            style={{
-              "--swiper-navigation-size": "44px",
-              "--swiper-navigation-top-offset": "50%",
-              "--swiper-navigation-sides-offset": "10px",
-              "--swiper-navigation-color": "#474747",
-            }}
+            style={
+              {
+                "--swiper-navigation-size": "44px",
+                "--swiper-navigation-top-offset": "50%",
+                "--swiper-navigation-sides-offset": "10px",
+                "--swiper-navigation-color": "#474747",
+              } as never
+            }
           >
             {product.imagesSrc.map((imageSrc, index) => (
               <SwiperSlide key={index}>

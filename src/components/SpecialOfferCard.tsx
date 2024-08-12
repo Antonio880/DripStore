@@ -12,7 +12,9 @@ const SpecialOfferCard: React.FC = () => {
         />
       </div>
       <div className="flex flex-col md:ml-12 md:basis-1/2 md:pr-[200px]">
-        <p className="text-warning md:text-primary font-bold">Oferta especial</p>
+        <p className="text-warning md:text-primary font-bold">
+          Oferta especial
+        </p>
         <h1 className="text-dark-gray-2 text-2xl md:text-5xl md:w-[500px] font-bold my-2">
           Air Jordan edição de colecionador
         </h1>
@@ -23,7 +25,9 @@ const SpecialOfferCard: React.FC = () => {
           aliquip
         </p>
         <div className="">
-          <CustomButton classname="bg-primary  hover:bg-[#b33672]">Ver Oferta</CustomButton>
+          <CustomButton classname="bg-primary  hover:bg-[#b33672]">
+            Ver Oferta
+          </CustomButton>
         </div>
       </div>
     </div>

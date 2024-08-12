@@ -1,6 +1,4 @@
-/* styles.css */
 .custom-checkbox:checked {
-    background-color: #EE4266; /* Cor rosa */
-    border-color: #EE4266;
-  }
-  
+  background-color: #ee4266;
+  border-color: #ee4266;
+}

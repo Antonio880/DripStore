@@ -3,12 +3,13 @@ export const products = [
     id: 1,
     name: "Tênis Nike Revolution 6 Next Nature Masculino",
     category: "Roupas",
-    price: 219.00,
-    price_old: 219.00,
+    price: 219.0,
+    price_old: 219.0,
     discount: "30% OFF",
     tam: ["39", "40", "41", "42", "43"],
     cores: ["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imagesSrc: ["tenis_nike.svg", "tenis_nike.svg", "tenis_nike.svg"],
   },
   {
@@ -17,21 +18,23 @@ export const products = [
     category: "Tênis",
     price: 100,
     price_old: 200,
-    tam: [ "42", "43"],
+    tam: ["42", "43"],
     cores: ["#6FEEFF", "#FF6969", "#5E5E5E"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imagesSrc: ["tenis_product.svg", "tenis_product.svg"],
   },
   {
     id: 3,
     name: "K-Swiss V8 - Masculino",
     category: "Tênis",
-    price: 219.00,
-    price_old: 219.00,
+    price: 219.0,
+    price_old: 219.0,
     discount: "15% OFF",
-    tam: [ "41", "42", "43"],
+    tam: ["41", "42", "43"],
     cores: ["#6FEEFF", "#FF6969", "#6D70B7"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imagesSrc: ["tenis_product.svg", "tenis_product.svg"],
   },
   {
@@ -68,7 +71,8 @@ export const products = [
     price_old: 200,
     tam: ["39", "40", "41", "43"],
     cores: ["#FF6969", "#5E5E5E", "#6D70B7"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imagesSrc: ["tenis_product.svg", "tenis_product.svg"],
   },
   {
@@ -79,7 +83,8 @@ export const products = [
     price_old: 200,
     tam: ["39", "40", "42", "43"],
     cores: ["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     discount: "15% OFF",
     imagesSrc: ["tenis_product.svg", "tenis_product.svg"],
   },
@@ -92,7 +97,8 @@ export const products = [
     tam: ["39", "41", "42", "43"],
     cores: ["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"],
     discount: "15% OFF",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     imagesSrc: ["tenis_product.svg", "tenis_product.svg"],
   },
 ];

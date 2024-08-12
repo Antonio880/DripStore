@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface RadioItemProps {
   id: string;
@@ -16,13 +16,15 @@ const RadioItem: React.FC<RadioItemProps> = ({ id, name, value, label }) => {
         name={name}
         value={value}
         style={{
-          accentColor: '#EE4266', // Cor rosa
-          width: '16px',
-          height: '16px'
+          accentColor: "#EE4266", // Cor rosa
+          width: "16px",
+          height: "16px",
         }}
         className="form-radio custom-radio"
       />
-      <label htmlFor={id} className="ml-2">{label}</label>
+      <label htmlFor={id} className="ml-2">
+        {label}
+      </label>
     </div>
   );
 };

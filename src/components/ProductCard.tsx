@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import photo from "../assets/tenis_product.svg";
 import tenis from "../assets/tenis_nike.svg";
 
@@ -23,9 +23,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
   discount,
   imagesSrc,
-  price_old
+  price_old,
 }) => {
-
   const isDynamicRoute = true;
   let displayImageSrc = isDynamicRoute ? photo : imagesSrc[0];
   displayImageSrc = imagesSrc[0] === "tenis_nike.svg" ? tenis : photo;

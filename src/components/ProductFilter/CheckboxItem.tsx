@@ -11,7 +11,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({
   id,
   name,
   value,
-  label
+  label,
 }) => {
   return (
     <div className="flex items-center mb-2">
@@ -21,7 +21,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({
         name={name}
         value={value}
         style={{
-          accentColor: "#C92071"
+          accentColor: "#C92071",
         }}
         className="form-checkbox custom-checkbox h-4 w-4"
       />
