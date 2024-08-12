@@ -47,7 +47,7 @@ const Carousel: React.FC = () => {
                   {page.description}
                 </p>
                 <div className="pt-8">
-                  <CustomButton classname="bg-primary  hover:bg-[#b33672]">
+                  <CustomButton classname="bg-primary mb-12 md:mb-0 hover:bg-[#b33672]">
                     {page.buttonText}
                   </CustomButton>
                 </div>

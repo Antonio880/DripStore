@@ -24,7 +24,7 @@ export default function EmphasisCollection() {
       <h1 className="flex justify-center text-2xl text-dark-gray-2 font-bold">
         Coleções em Destaque
       </h1>
-      <div className="flex flex-row gap-16 mt-16 mb-40">
+      <div className="flex flex-row gap-10 md:gap-16 mt-16 mb-28 md:mb-40">
         {buttons.map((button) => (
           <div
             key={button.id}
