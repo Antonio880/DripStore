@@ -6,18 +6,23 @@ import { CiFilter } from "react-icons/ci";
 import { products } from "../components/ProductList/data";
 
 const ProductPage: React.FC = () => {
-  const [sortOption, setSortOption] = useState("relevance");
+  const [sortOption, setSortOption] =
+    useState<keyof typeof sortOptions>("relevance");
   const [filteredProducts, setFilteredProducts] = useState(products);
   const location = useLocation();
 
-  const sortOptions = {
-    relevance: "Mais relevantes",
-    priceAsc: "Mais baratos",
-    priceDesc: "Mais caros",
+  const sortOptions: {
+    relevance: string;
+    priceAsc: string;
+    priceDesc: string;
+  } = {
+    relevance: "Relevância",
+    priceAsc: "Preço: Menor para Maior",
+    priceDesc: "Preço: Maior para Menor",
   };
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSortOption(event.target.value);
+    setSortOption(event.target.value as keyof typeof sortOptions);
   };
 
   useEffect(() => {
@@ -35,7 +40,7 @@ const ProductPage: React.FC = () => {
         case "priceDesc":
           return b.price - a.price;
         default:
-          return 0; // Relevância não altera a ordem
+          return 0;
       }
     });
 
@@ -49,8 +54,11 @@ const ProductPage: React.FC = () => {
           htmlFor="sortOptions"
           className="flex order-2 md:order-1 md:items-center justify-center md:text-lg"
         >
-          <p className="font-semibold">Resultados para "{new URLSearchParams(location.search).get("search")}"</p>&nbsp;
-          - &nbsp;{filteredProducts.length} Produtos
+          <p className="font-semibold">
+            Resultados para "
+            {new URLSearchParams(location.search).get("search")}"
+          </p>
+          &nbsp; - &nbsp;{filteredProducts.length} Produtos
         </label>
         <div className="flex justify-center">
           <select
@@ -77,7 +85,7 @@ const ProductPage: React.FC = () => {
               backgroundColor: "#EE4266",
               color: "white",
               padding: "8px",
-              borderRadius: "20%"
+              borderRadius: "20%",
             }}
           />
         </div>
@@ -87,7 +95,11 @@ const ProductPage: React.FC = () => {
           <ProductFilter />
         </div>
         <div className="md:w-4/5 w-full">
-          <ProductList products={filteredProducts} classname="grid-cols-2 md:grid-cols-3 px-4" isProductPage={true}/>
+          <ProductList
+            products={filteredProducts}
+            classname="grid-cols-2 md:grid-cols-3 px-4"
+            isProductPage={true}
+          />
         </div>
       </div>
     </main>

@@ -21,17 +21,15 @@ export default function EmphasisCollection() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="flex justify-center text-2xl text-dark-gray-2 font-bold">
-        Coleções em Destaque
-      </h1>
-      <div className="flex flex-row gap-10 md:gap-16 mt-16 mb-28 md:mb-40">
+      <div className="flex flex-row gap-6 md:gap-16 mt-16 mb-12 mr-8">
         {buttons.map((button) => (
           <div
             key={button.id}
-            className="bg-white flex cursor-pointer items-center justify-center rounded-full p-8 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            className="bg-white flex cursor-pointer items-center justify-center rounded-full p-4 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
             onClick={() => handleButtonClick(button.id)}
           >
             <button
+              className="flex justify-center items-center"
               style={{
                 width: "64px",
                 height: "64px",
@@ -43,10 +41,11 @@ export default function EmphasisCollection() {
                     ? `brightness(0) saturate(100%) invert(26%) sepia(55%) saturate(4385%) hue-rotate(315deg) brightness(89%) contrast(88%)`
                     : "invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg)",
               }}
-            />
-            <h3 className="absolute mt-48 font-bold text-sm text-[#474747] tracking-wider">
-              {button.text}
-            </h3>
+            >
+              <h3 className="absolute mt-40 font-bold text-sm text-[#474747] tracking-wider">
+                {button.text}
+              </h3>
+            </button>
           </div>
         ))}
       </div>

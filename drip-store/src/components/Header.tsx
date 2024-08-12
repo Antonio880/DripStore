@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import SearchInput from "./SearchInput";
 import CustomButton from "./CustomButton";
 import NavigationMenu from "./NavigationMenu";
@@ -41,7 +41,7 @@ export default function Header() {
   useEffect(() => {
     if (cartItems.length > 0) {
       setIsAnimating(true);
-      setTimeout(() => setIsAnimating(false), 500); // Duração da animação
+      setTimeout(() => setIsAnimating(false), 500);
     }
   }, [cartItems]);
 
@@ -56,10 +56,7 @@ export default function Header() {
             onClick={toggleSidebar}
           />
         </div>
-        <div
-          className="flex items-center justify-center md:justify-start md:flex-none cursor-pointer"
-          onClick={() => navigate("/home")}
-        >
+        <div className="flex items-center justify-center md:justify-start md:flex-none cursor-pointer">
           <img
             src="icon_drip_store.svg"
             alt="Digital Store Logo"
@@ -110,7 +107,7 @@ export default function Header() {
               placeholder="Pesquisar Produto..."
               value={searchQuery}
               onChange={handleSearchChange}
-              onKeyDown={e => e.key === "Enter" && handleSearchSubmit()}
+              onKeyDown={(e) => e.key === "Enter" && handleSearchSubmit()}
               className="bg-gray-100 rounded-md p-3 pl-3 pr-10 w-full"
             />
             <div
@@ -134,10 +131,8 @@ export default function Header() {
       <div className="hidden md:block">
         <NavigationMenu />
       </div>
-
-      {/* Barra lateral */}
       <div
-        className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transition-transform transform ${
+        className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transition-transform max-w-xs transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden w-3/4`}
       >

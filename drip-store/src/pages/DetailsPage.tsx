@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../components/ProductList/data";
 import ProductList from "../components/ProductList/ProductList";
@@ -13,7 +13,7 @@ import { Navigation } from "swiper/modules";
 
 const DetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const product = products.find(p => p.id === parseInt(id || ""));
+  const product = products.find((p) => p.id === parseInt(id || ""));
   const { addToCart } = useCart();
   const navigate = useNavigate();
 
@@ -31,7 +31,7 @@ const DetailsPage: React.FC = () => {
       price: product.price,
       quantity: 1,
       tam: selectedSize,
-      selectedColor
+      selectedColor,
     });
   };
 
@@ -48,7 +48,7 @@ const DetailsPage: React.FC = () => {
               "--swiper-navigation-size": "44px",
               "--swiper-navigation-top-offset": "50%",
               "--swiper-navigation-sides-offset": "10px",
-              "--swiper-navigation-color": "#474747"
+              "--swiper-navigation-color": "#474747",
             }}
           >
             {product.imagesSrc.map((imageSrc, index) => (
