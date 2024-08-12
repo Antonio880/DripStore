@@ -1,18 +1,18 @@
 import { useState } from "react";
-import Camisetas from "../assets/colections/camisetas.svg";
-import Calcas from "../assets/colections/pants.svg";
-import Headphones from "../assets/colections/fones.svg";
-import Tenis from "../assets/colections/tenis.svg";
+import camisetas from "../../public/camisetas.svg";
+import calcas from "../../public/pants.svg";
+import headphones from "../../public/fones.svg";
+import tenis from "../../public/tenis.svg";
 
 export default function EmphasisCollection() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const buttons = [
-    { id: 0, image: Camisetas, text: "Camisetas" },
-    { id: 1, image: Calcas, text: "Calças" },
-    { id: 2, image: Calcas, text: "Bonés" },
-    { id: 3, image: Headphones, text: "Headphones" },
-    { id: 4, image: Tenis, text: "Tênis" },
+    { id: 0, image: camisetas, text: "Camisetas" },
+    { id: 1, image: calcas, text: "Calças" },
+    { id: 2, image: calcas, text: "Bonés" },
+    { id: 3, image: headphones, text: "Headphones" },
+    { id: 4, image: tenis, text: "Tênis" },
   ];
 
   const handleButtonClick = (index: number) => {
